@@ -1445,7 +1445,7 @@ $( document ).ready(function() {
                             d3.json("data/" + choice + ".json", function (error, data) {
                                 if (error) {
                                     M.toast({html: 'Local data does not exist, try to query from the internet!'})
-                                    d3.json("https://raw.githubusercontent.com/iDataVisualizationLab/HPCC/master/HiperView/data/" + choice + ".json", function (error, data) {
+                                    d3.json("https://raw.githubusercontent.com/iDataVisualizationLab/TimeRadar/main/src/data/" + choice + ".json", function (error, data) {
                                         if (error) {
 
                                         }
@@ -1587,7 +1587,7 @@ $( document ).ready(function() {
                     d3.json(srcpath+"data/" + choice + ".json", function (error, data) {
                         if (error) {
                             M.toast({html: 'Local data does not exist, try to query from the internet!'});
-                            d3.json("https://raw.githubusercontent.com/iDataVisualizationLab/HPCC/master/HiperView/data/" + choiceinit + ".json", function (error, data) {
+                            d3.json("https://raw.githubusercontent.com/iDataVisualizationLab/TimeRadar/main/src/data/" + choiceinit + ".json", function (error, data) {
                                 if (error) throw error;
                                 d3.select(".currentDate")
                                     .text("" + d3.timeParse("%d %b %Y")(d3.select('#datacom').select('[selected="selected"]').text()).toDateString());
